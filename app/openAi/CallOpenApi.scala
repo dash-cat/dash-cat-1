@@ -8,11 +8,11 @@ import scala.util.{Try, Success, Failure}
 
 // Class for handling OpenAI API requests
 object OpenAiApiClient {
-  val openAiApiKey = sys.env.getOrElse("OPENAI_API_KEY", "default-key-if-not-set")
+  val openAiApiKey = sys.env.getOrElse(OPENAI_API_KEY, "default-key-if-not-set")
 
   def callOpenAiApi(payload: String): Try[String] = {
     val client = HttpClients.createDefault()
-    val post = new HttpPost("URL_API_ENDPOINT") // Replace with actual URL
+    val post = new HttpPost("https://api.openai.com/v1/images/generations") 
     post.setHeader("Content-type", "application/json")
     post.setHeader("Authorization", s"Bearer ${System.getenv(openAiApiKey)}") 
 
