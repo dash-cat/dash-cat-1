@@ -3,7 +3,7 @@ organization := "com.example"
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+
 
 scalaVersion := "2.13.12"
 
@@ -12,6 +12,11 @@ libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.0
 libraryDependencies += "org.python" % "jython-standalone" % "2.7.2"
 libraryDependencies += "org.apache.httpcomponents" % "httpclient" % "4.5.13"
 libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value
+libraryDependencies += "org.playframework" %% "play-ahc-ws-standalone" % "3.0.0"
+// libraryDependencies += "org.playframework" %% "play-ws" % "3.0.0"
+
+
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
