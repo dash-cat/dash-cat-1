@@ -41,19 +41,24 @@ class HomeController @Inject()(
   }
 
 
-    def safeDivide(x: Int, y: Int): Option[Int] = if (y != 0) Some(x / y) else None
-    val result = safeDivide(10, 2).flatMap(r => safeDivide(r, 3)) // возвращает Option[Int]
-
-    val numbers = List(1, 2, 3)
-    val result = numbers.flatMap(n => List(n, n * 10)) // List(1, 10, 2, 20, 3, 30)
-
-    import scala.concurrent.Future
-    import scala.concurrent.ExecutionContext.Implicits.global
-
-    def asyncOperation1(): Future[Int] = Future { /* асинхронная операция */ }
-    def asyncOperation2(x: Int): Future[String] = Future { /* еще одна асинхронная операция */ }
-
-    val result = asyncOperation1().flatMap(n => asyncOperation2(n))
-
-
 }
+
+import scala.language.experimental.macros
+import scala.reflect.macros.blackbox
+
+object Logger {
+  def log(message: String): Unit = macro logImpl
+
+  def logImpl(c: blackbox.Context)(message: c.Expr[String]): c.Expr[Unit] = {
+    import c.universe._
+
+    val pos = c.enclosingPosition
+    val file = pos.source.file.name
+    val line = pos.line
+
+    reify {
+      println(s"[$file:$line] " + message.splice)
+    }
+  }
+}
+

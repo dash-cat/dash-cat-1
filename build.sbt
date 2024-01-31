@@ -9,6 +9,9 @@ scalaVersion := "2.13.12"
 
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.0" % Test
+libraryDependencies += "org.python" % "jython-standalone" % "2.7.2"
+libraryDependencies += "org.apache.httpcomponents" % "httpclient" % "4.5.13"
+libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
