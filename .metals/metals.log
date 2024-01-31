@@ -12,3 +12,14 @@
 2024.02.01 00:02:03 WARN  no build target for: /home/griggy/code/cat-back/app/controllers/HomeController.scala
 Feb 01, 2024 12:02:38 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2024.02.01 00:31:39 WARN  no build target for: /home/griggy/code/cat-back/app/controllers/HomeController.scala
+2024.02.01 00:31:51 WARN  no build target for: /home/griggy/code/cat-back/app/controllers/HomeController.scala
+2024.02.01 00:35:33 WARN  no build target for: /home/griggy/code/cat-back/app/controllers/HomeController.scala
+2024.02.01 00:37:17 WARN  no build target for: /home/griggy/code/cat-back/build.sc
+2024.02.01 00:37:21 WARN  no build target for: /home/griggy/code/cat-back/build.sbt
+2024.02.01 00:37:28 WARN  no build target for: /home/griggy/code/cat-back/test/controllers/HomeControllerSpec.scala
+Feb 01, 2024 12:47:16 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.02.01 00:50:07 WARN  no build target for: /home/griggy/code/cat-back/project/plugins.sbt
+2024.02.01 00:50:08 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/project/plugins.sbt
+2024.02.01 00:50:07 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/project/plugins.sbt
