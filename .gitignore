@@ -6,4 +6,5 @@ target
 /.classpath
 /.project
 /.settings
+/app/openAi/secret.scala
 /RUNNING_PID

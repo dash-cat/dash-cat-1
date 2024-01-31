@@ -23,3 +23,23 @@ INFO: Unsupported notification method: $/setTrace
 2024.02.01 00:50:07 WARN  no build target for: /home/griggy/code/cat-back/project/plugins.sbt
 2024.02.01 00:50:08 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/project/plugins.sbt
 2024.02.01 00:50:07 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/project/plugins.sbt
+2024.02.01 01:20:07 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/Fetcher.scala
+2024.02.01 01:20:33 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/Fetcher.scala
+2024.02.01 01:36:43 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/Fetcher.scala
+Feb 01, 2024 1:38:24 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 335
+2024.02.01 01:46:11 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/Fetcher.scala
+2024.02.01 02:17:18 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/Fetcher.scala
+2024.02.01 02:18:16 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/secret.skala.scala
+2024.02.01 02:18:16 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.skala.scala
+2024.02.01 02:18:26 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/secret.scala.scala
+2024.02.01 02:18:26 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.scala.scala
+2024.02.01 02:18:27 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.scala.scala
+2024.02.01 02:18:41 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:18:41 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:18:41 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:18:51 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:18:54 WARN  Could not find semantic tokens for: file:///home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:19:04 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:19:21 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/secret.scala
+2024.02.01 02:19:22 WARN  no build target for: /home/griggy/code/cat-back/app/openAi/Fetcher.scala
