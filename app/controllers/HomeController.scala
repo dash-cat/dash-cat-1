@@ -6,37 +6,39 @@ import play.api.mvc._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import play.api.Logger
+import play.api.libs.json.Json
+import scala.concurrent.Future
+import play.api.libs.json.Json
+import scala.util.{Success, Failure}
+
 @Singleton
 class HomeController @Inject()(
   val controllerComponents: ControllerComponents
 ) extends BaseController {
 
 
-  val logger: Logger = Logger(this.getClass)
+  val logger: play.api.Logger = play.api.Logger(this.getClass)
+  def index() = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.index())
+  }
 
-  def generateImage(): Future[Result] = {
+  
+def generateImage: Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>
   val payload = Json.obj(
-      "model" -> "dall-e-3",
-      "prompt" -> "A cute cat",
-      "n" -> 1,
-      "size" -> "1024x1024"
+    "model" -> "dall-e-3",
+    "prompt" -> "A cute cat",
+    "n" -> 1,
+    "size" -> "1024x1024"
   ).toString()
 
-  Future {
-    OpenAiApiClient.callOpenAiApi(payload) match {
-      case Success(response) =>
-        logger.debug("Отправка запроса на API")
-        Ok("Image generated successfully.")
+   val futureResponse = Future.fromTry(OpenAiApiClient.callOpenAiApi(payload))
 
-      case Failure(exception) =>
-        InternalServerError("Error generating image")
-    }
+  futureResponse.map { response =>
+    Ok("Image generated successfully.")
+  }.recover {
+    case exception: Throwable =>
+      logger.error("Error generating image", exception)
+      InternalServerError("Error generating image")
   }
 }
-
-  def index() = Action.async { implicit request: Request[AnyContent] =>
-    generateImage().map { imageResult =>
-      Ok(views.html.index(imageResult))
-    }
-  }
 }

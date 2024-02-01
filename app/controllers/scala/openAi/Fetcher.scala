@@ -8,6 +8,8 @@ import scala.concurrent.ExecutionContext
 import java.nio.file.{Files, Paths}
 import scala.concurrent.Future
 
+
+
 @Singleton
 class FetchController @Inject()(
     val controllerComponents: ControllerComponents,
@@ -24,13 +26,13 @@ class FetchController @Inject()(
       "n" -> 1,
       "size" -> "1024x1024"
     )
-    
+
         logger.debug("Отправка запроса на API")
-    
+
 
     ws.url("https://api.openai.com/v1/images/generations")
       .addHttpHeaders("Content-Type" -> "application/json")
-      .addHttpHeaders("Authorization" -> s"Bearer ${System.getenv(openAiApiKey)}")
+      .addHttpHeaders("Authorization" -> s"Bearer sk-")
       .post(requestBody)
       .map { response =>
         logger.debug("Получен ответ от API")

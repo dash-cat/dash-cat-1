@@ -1,11 +1,13 @@
 logs
 target
-~/.bashrc
+/.bloop
+/.g8
+/.vscode
 /.bsp
 /.idea
 /.idea_modules
 /.classpath
 /.project
 /.settings
-/app/openAi/secret.scala
+/app/src/main/scala/openAi/secret.scala
 /RUNNING_PID

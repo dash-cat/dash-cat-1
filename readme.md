@@ -1,6 +1,6 @@
 #cat_readme
 
-api key openAi [openAi](app/openAi/secret.scala)
+api key openAi [openAi](app/src/main/scala/openAi/secret.scala)
 ```scala
 package controllers
 

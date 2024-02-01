@@ -1,8 +1,9 @@
 name := """cat-back"""
-organization := "com.example"
+organization := "cat-science.org"
 
 version := "1.0-SNAPSHOT"
 
+Global / onChangedBuildSource := ReloadOnSourceChanges
 
 
 scalaVersion := "2.13.12"
@@ -15,7 +16,11 @@ libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value
 libraryDependencies += "org.playframework" %% "play-ahc-ws-standalone" % "3.0.0"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.25"
-
+libraryDependencies ++= Seq(
+  guice,
+  "org.playframework" %% "play-ws" % "3.0.0", // Use the correct Play version
+  // ... other dependencies
+)
 
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
