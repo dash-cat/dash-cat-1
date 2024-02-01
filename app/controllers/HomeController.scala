@@ -19,10 +19,7 @@ class HomeController @Inject()(
 
   val logger: play.api.Logger = play.api.Logger(this.getClass)
   def index() = Action { implicit request: Request[AnyContent] =>
-   val client = new RetrofitClient()
-    client.getMovies(2021, "January").foreach(println)
-    client.getFilm("12345").foreach(println)
-
+    Ok(views.html.index())
   } 
 
   

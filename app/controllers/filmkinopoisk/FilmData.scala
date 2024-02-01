@@ -59,6 +59,31 @@ case class FilmDataItem(
   year: Option[Int]
 )
 
+case class Movie(
+  countries: List[Country],
+  duration: Int,
+  genres: List[Genre],
+  kinopoiskId: Int,
+  nameEn: String,
+  nameRu: String,
+  posterUrl: String,
+  posterUrlPreview: String,
+  premiereRu: String,
+  year: Int
+)
+object Movie {
+  implicit val format: Format[Movie] = Json.format[Movie]
+}
+case class ListPremiere(
+  items: List[Movie],
+  total: Int
+)
+
+object ListPremiere {
+  implicit val format: Format[ListPremiere] = Json.format[ListPremiere]
+}
+
+
 object FilmDataItem {
   implicit val format: Format[FilmDataItem] = Json.format[FilmDataItem]
 }
