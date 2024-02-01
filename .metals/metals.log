@@ -1349,3 +1349,122 @@ SEVERE: A severe compiler error occurred, full details of the error can be found
 2024.02.01 09:58:54 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
 2024.02.01 09:58:54 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
 2024.02.01 09:58:54 INFO  time: indexed workspace in 1.83s
+Feb 01, 2024 10:38:07 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Feb 01, 2024 11:08:55 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1784
+2024.02.01 11:11:10 INFO  compiling root (1 scala source)
+2024.02.01 11:11:20 INFO  time: compiled root in 10s
+Feb 01, 2024 11:11:32 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1801
+Feb 01, 2024 11:15:46 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2172
+2024.02.01 11:22:15 ERROR Failed to tokenize input for semantic tokens for /home/griggy/code/cat-back/app/controllers/filmkinopoisk/Film.scala
+scala.meta.tokenizers.TokenizeException: <input>:18: error: unclosed string literal
+    post.setHeader("accept", "application/json
+                             ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringLit(LegacyScanner.scala:553)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:372)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:30)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+2024.02.01 11:23:48 INFO  compiling root (1 scala source)
+2024.02.01 11:23:48 INFO  time: compiled root in 0.55s
+2024.02.01 11:26:43 WARN  Using indexes to guess the definition of Future
+2024.02.01 11:28:34 INFO  compiling root (1 scala source)
+2024.02.01 11:28:34 INFO  time: compiled root in 0.45s
+2024.02.01 11:28:50 INFO  compiling root (1 scala source)
+2024.02.01 11:28:50 INFO  time: compiled root in 0.39s
+2024.02.01 11:28:57 INFO  compiling root (1 scala source)
+2024.02.01 11:28:57 INFO  time: compiled root in 0.32s
+2024.02.01 11:29:04 INFO  compiling root (1 scala source)
+2024.02.01 11:29:04 INFO  time: compiled root in 0.45s
+2024.02.01 11:29:58 INFO  compiling root (1 scala source)
+2024.02.01 11:29:58 INFO  time: compiled root in 0.36s
+2024.02.01 11:37:06 INFO  time: code lens generation in 1.04s
+2024.02.01 11:37:59 INFO  running '/usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djline.terminal=jline.UnsupportedTerminal -Dsbt.log.noformat=true -Dfile.encoding=UTF-8 -Djava.home=/usr/lib/jvm/java-11-openjdk-amd64 -jar /tmp/metals6816094640316311512/sbt-launch.jar -Dbloop.export-jar-classifiers=sources bloopInstall'
+2024.02.01 11:38:02 INFO  [info] welcome to sbt 1.9.8 (Ubuntu Java 11.0.21)
+2024.02.01 11:38:04 INFO  [info] loading settings for project cat-back-build-build-build from metals.sbt ...
+2024.02.01 11:38:06 INFO  [info] loading project definition from /home/griggy/code/cat-back/project/project/project
+2024.02.01 11:38:08 INFO  [info] loading settings for project cat-back-build-build from metals.sbt ...
+2024.02.01 11:38:08 INFO  [info] loading project definition from /home/griggy/code/cat-back/project/project
+2024.02.01 11:38:12 INFO  [success] Generated .bloop/cat-back-build-build.json
+2024.02.01 11:38:12 INFO  [success] Total time: 4 s, completed Feb 1, 2024, 11:38:12 AM
+2024.02.01 11:38:12 INFO  [info] loading settings for project cat-back-build from metals.sbt,plugins.sbt ...
+2024.02.01 11:38:12 INFO  [info] loading project definition from /home/griggy/code/cat-back/project
+2024.02.01 11:38:14 INFO  [success] Generated .bloop/cat-back-build.json
+2024.02.01 11:38:14 INFO  [success] Total time: 2 s, completed Feb 1, 2024, 11:38:14 AM
+2024.02.01 11:38:20 INFO  [info] loading settings for project root from build.sbt ...
+2024.02.01 11:38:20 INFO  [info]   __              __
+2024.02.01 11:38:20 INFO  [info]   \ \     ____   / /____ _ __  __
+2024.02.01 11:38:20 INFO  [info]    \ \   / __ \ / // __ `// / / /
+2024.02.01 11:38:20 INFO  [info]    / /  / /_/ // // /_/ // /_/ /
+2024.02.01 11:38:20 INFO  [info]   /_/  / .___//_/ \__,_/ \__, /
+2024.02.01 11:38:20 INFO  [info]       /_/               /____/
+2024.02.01 11:38:20 INFO  [info] 
+2024.02.01 11:38:20 INFO  [info] Version 3.0.0 running Java 11.0.21
+2024.02.01 11:38:20 INFO  [info] 
+2024.02.01 11:38:20 INFO  [info] Play is run entirely by the community. Please consider contributing and/or donating:
+2024.02.01 11:38:20 INFO  [info] https://www.playframework.com/sponsors
+2024.02.01 11:38:20 INFO  [info] 
+2024.02.01 11:38:30 INFO  [success] Generated .bloop/root.json
+2024.02.01 11:38:30 INFO  [success] Generated .bloop/root-test.json
+2024.02.01 11:38:30 INFO  [success] Total time: 9 s, completed Feb 1, 2024, 11:38:30 AM
+2024.02.01 11:38:30 INFO  time: ran 'sbt bloopInstall' in 31s
+2024.02.01 11:38:30 INFO  Disconnecting from Bloop session...
+2024.02.01 11:38:30 INFO  Shut down connection with build server.
+2024.02.01 11:38:30 INFO  Shut down connection with build server.
+2024.02.01 11:38:30 INFO  Shut down connection with build server.
+2024.02.01 11:38:30 INFO  Attempting to connect to the build server...
+2024.02.01 11:38:30 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/griggy/.bloop/bloop.json
+2024.02.01 11:38:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/griggy/code/cat-back/.metals/bsp.trace.json or /home/griggy/.cache/metals/bsp.trace.json
+2024.02.01 11:38:30 INFO  Attempting to connect to the build server...
+2024.02.01 11:38:30 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/griggy/.bloop/bloop.json
+2024.02.01 11:38:30 INFO  Attempting to connect to the build server...
+2024.02.01 11:38:30 INFO  Bloop uses /usr/lib/jvm/java-11-openjdk-amd64 defined at /home/griggy/.bloop/bloop.json
+2024.02.01 11:38:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/griggy/code/cat-back/project/.metals/bsp.trace.json or /home/griggy/.cache/metals/bsp.trace.json
+2024.02.01 11:38:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/griggy/code/cat-back/project/project/.metals/bsp.trace.json or /home/griggy/.cache/metals/bsp.trace.json
+2024.02.01 11:38:30 INFO  time: Connected to build server in 0.32s
+2024.02.01 11:38:30 INFO  Connected to Build server: Bloop v1.5.13
+2024.02.01 11:38:36 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2024.02.01 11:38:36 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2024.02.01 11:38:36 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip, /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/src.zip, /usr/lib/jvm/java-11-openjdk-amd64/lib/src.zip. Java symbols will not be available.
+2024.02.01 11:38:36 INFO  time: indexed workspace in 5.5s
+2024.02.01 11:38:40 INFO  time: code lens generation in 3.35s
+2024.02.01 11:38:53 INFO  compiling root (11 scala sources and 1 java source)
+2024.02.01 11:38:56 INFO  time: compiled root in 2.92s
+2024.02.01 11:39:32 INFO  compiling root (11 scala sources and 1 java source)
+2024.02.01 11:39:34 INFO  time: compiled root in 1.39s
+2024.02.01 11:40:17 INFO  compiling root (12 scala sources and 1 java source)
+Feb 01, 2024 11:40:17 AM scala.meta.internal.pc.CompilerAccess retryWithCleanCompiler
+INFO: compiler crashed due to an error in the Scala compiler, retrying with new compiler instance.
+Feb 01, 2024 11:40:17 AM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /home/griggy/code/cat-back/.metals/.reports/metals-full/2024-02-01/r_compiler-error_(root)_11-40-17-295.md
+2024.02.01 11:40:18 INFO  time: compiled root in 1.47s
+2024.02.01 11:40:18 INFO  compiling root (12 scala sources and 1 java source)
+2024.02.01 11:40:19 INFO  time: compiled root in 1.21s
+2024.02.01 11:43:02 INFO  compiling root (13 scala sources and 1 java source)
+2024.02.01 11:43:03 INFO  time: compiled root in 1.08s
+2024.02.01 11:43:03 INFO  compiling root (13 scala sources and 1 java source)
+2024.02.01 11:43:04 INFO  time: compiled root in 0.98s

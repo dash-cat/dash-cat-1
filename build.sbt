@@ -18,8 +18,9 @@ libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.3"
 libraryDependencies += "org.slf4j" % "slf4j-api" % "1.7.25"
 libraryDependencies ++= Seq(
   guice,
-  "org.playframework" %% "play-ws" % "3.0.0", // Use the correct Play version
-  // ... other dependencies
+     "org.playframework" %% "play-ws" % "3.0.0",
+    "com.softwaremill.sttp.client" %% "core" % "2.2.9",
+    "com.typesafe.play" %% "play-json" % "2.9.1"
 )
 
 
