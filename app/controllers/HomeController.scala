@@ -19,11 +19,14 @@ class HomeController @Inject()(
 
   val logger: play.api.Logger = play.api.Logger(this.getClass)
   def index() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.index())
-  }
+   val client = new RetrofitClient()
+    client.getMovies(2021, "January").foreach(println)
+    client.getFilm("12345").foreach(println)
+
+  } 
 
   
-def generateImage: Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>
+  def generateImage: Action[AnyContent] = Action.async { implicit request: Request[AnyContent] =>
   val payload = Json.obj(
     "model" -> "dall-e-3",
     "prompt" -> "A cute cat",
